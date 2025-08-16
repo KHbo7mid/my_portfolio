@@ -17,8 +17,8 @@ Welcome to my personal portfolio website! This web application showcases my skil
 - Vercel for deployment
 
 ## 🔗 Links
-- **Live Portfolio:** [https://your-portfolio.vercel.app](https://your-portfolio.vercel.app)  
-- **GitHub Repository:** [https://github.com/KHbo7mid/portfolio](https://github.com/KHbo7mid/my_portfolio)](https://github.com/KHbo7mid/portfolio)
+- **Live Portfolio:** [[https://your-portfolio.vercel.app](https://ahmed-khiari.vercel.app/)]
+- **GitHub Repository:** [https://github.com/KHbo7mid/portfolio](https://github.com/KHbo7mid/my_portfolio)]
 
 ## 📫 Contact
 You can reach me via email: [khiari.ahmed2002@gmail.com](mailto:khiari.ahmed2002@gmail.com)
