@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
-
+import emailjs from '@emailjs/browser';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -16,11 +16,25 @@ const Contact = () => {
     setIsSubmitting(true);
     
    
-   setTimeout(() => {
-  toast.success("Thank you for your message! I'll get back to you soon.");
-  setFormData({ name: '', email: '', message: '' });
-  setIsSubmitting(false);
-}, 2000);
+    try {
+      const response = await emailjs.send(
+        'service_g4wjkfw',
+        'template_nvbttri',
+        formData,
+        'm6SnJXrEcXL1EzAZL'
+      );
+      if (response.status === 200) {
+        toast.success('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast.error('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast.error('An error occurred while sending your message.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
