@@ -41,7 +41,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-2xl sm:text-3xl lg:text-4xl text-gray-300 mb-6 font-light"
           >
-            Software Engineer
+            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent font-semibold">
+   Software Engineer
+</span>
+         
           </motion.h2>
 
           <motion.p
