@@ -69,16 +69,14 @@ As a Software Engineer, I’m motivated by innovation and discovery. I enjoy lea
             </button>
             
             <button 
-            onClick={()=>{
-                const link = document.createElement('a');
-    link.href = '/assets/ahmed_khiari_cv.pdf'; 
-    link.download = 'Ahmed_Khiari_CV.pdf';
-    link.click();
-            }}
-            className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2">
-              <Download size={20} />
-              Download CV
-            </button>
+  onClick={() => {
+    window.open('https://drive.google.com/drive/folders/1dc9CE-MY7aC6m_rDJ-3Q9oSxrm6FA0UD', '_blank');
+  }}
+  className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2"
+>
+  <Download size={20} />
+  Download CV
+</button>
           </motion.div>
         </motion.div>
 
