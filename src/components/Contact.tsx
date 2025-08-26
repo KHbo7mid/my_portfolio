@@ -75,7 +75,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/ahmed-khiari-b07617218/',
+      href: 'www.linkedin.com/in/ahmedkhiari/',
       color: 'hover:text-blue-400'
     },
     {

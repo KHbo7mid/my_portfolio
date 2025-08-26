@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Download, ArrowRight, Code, Palette, Zap } from 'lucide-react';
-const Hero = () => {
-  const handleScrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) aboutSection.scrollIntoView({ behavior: 'smooth' });
-  };
+import { Download, ArrowDown, Code, Palette, Zap } from 'lucide-react';
 
+const Hero = () => {
   // Container animation: stagger children
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -19,14 +15,11 @@ const Hero = () => {
     },
   };
 
-  
-
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800"
+      className="min-h-screen  flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800"
     >
-      
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -55,8 +48,6 @@ const Hero = () => {
         ))}
       </div>
 
-     
-
       {/* Main Content */}
       <motion.div
         variants={containerVariants}
@@ -64,17 +55,15 @@ const Hero = () => {
         animate="visible"
         className="relative z-10 text-center px-6 max-w-6xl mx-auto"
       >
-       
-
         {/* Heading */}
         <motion.h1
           variants={containerVariants}
           className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight mt-20"
         >
-         Hi I'm{' '}
+          Hi I'm{' '}
           <span className="relative inline-block">
             <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-             Ahmed Khiari
+              Ahmed Khiari
             </span>
             <motion.div
               animate={{ scaleX: [0, 1] }}
@@ -90,13 +79,13 @@ const Hero = () => {
           className="flex flex-wrap justify-center items-center gap-4 mb-8"
         >
           {[
-            { icon: Code, label: 'Software Engineer', color: 'emerald-400' },
-            { icon: Palette, label: 'Full Stack Developer', color: 'teal-400' },
-            { icon: Zap, label: 'AI Enthusiast', color: 'cyan-400' },
+            { icon: Code, label: 'Software Engineer', color: 'text-emerald-400' },
+            { icon: Palette, label: 'Full Stack Developer', color: 'text-teal-400' },
+            { icon: Zap, label: 'AI Enthusiast', color: 'text-cyan-400' },
           ].map(({ icon: Icon, label, color }, i) => (
             <React.Fragment key={i}>
               <div className="flex items-center gap-2 text-gray-300">
-                <Icon className={`w-5 h-5 text-${color}`} />
+                <Icon className={`w-5 h-5 ${color}`} />
                 <span className="text-xl sm:text-2xl font-light">{label}</span>
               </div>
               {i < 2 && <div className="w-2 h-2 bg-gray-500 rounded-full"></div>}
@@ -120,16 +109,7 @@ const Hero = () => {
           variants={containerVariants}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
         >
-          <motion.button
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleScrollToAbout}
-            className="group relative bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 flex items-center gap-3"
-          >
-            <span>Explore My Work</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.button>
-
+          {/* Download CV */}
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -139,12 +119,25 @@ const Hero = () => {
                 '_blank'
               )
             }
-            className="group border-2 border-emerald-400/50 text-emerald-400 hover:bg-emerald-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center gap-3 backdrop-blur-sm"
+            className="group relative bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-emerald-500/25 flex items-center gap-3"
           >
             <Download className="w-5 h-5" />
             <span>Download CV</span>
           </motion.button>
+
+         
         </motion.div>
+
+        {/* Scroll down */}
+        <div className="pt-5">
+          <a
+            href="#about"
+            className="inline-flex items-center text-blue-300 hover:text-blue-400 transition-colors"
+          >
+            Discover More About Me
+            <ArrowDown className="w-4 h-4 ml-1" />
+          </a>
+        </div>
       </motion.div>
     </section>
   );
