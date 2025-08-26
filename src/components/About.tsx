@@ -92,7 +92,7 @@ const About = () => {
             <div className="relative w-64 h-64 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 p-2">
               <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
                 <img
-                  src="/assets/images/picture.webp"
+                  src="pic.png"
                   alt="Profile"
                   className="w-full h-full object-cover rounded-full transition-transform duration-300 transform hover:scale-105"
                 />

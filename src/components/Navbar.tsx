@@ -58,7 +58,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             className="text-xl font-bold text-white"
           >
-            Portfolio
+             <span className='text-white ml-1'>Ahmed Khiari</span>
           </motion.div>
 
           {/* Desktop Navigation */}
