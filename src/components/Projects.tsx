@@ -5,40 +5,52 @@ import { ExternalLink, Github, Code2 } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'Supadata - Digital Business Cards',
-      description: 'Web application for creating and sharing digital business cards with QR codes. Includes responsive design, real-time updates, and secure user authentication.',
-      image: '/assets/images/supadata.png',
-      tech: ['React.js', 'Laravel', 'Tailwind CSS', 'MySQL', 'QR Code'],
-      github: 'https://github.com/KHbo7mid/supadata',
-      demo: '/assets/videos/supadata.mp4',
+      title: 'Smart Product Analyzer',
+      description: 'An intelligent E-commerce Product Scraper & Analyzer.t automatically scrapes product data (titles, prices, and specifications) from Tunisian online stores, then sends them to a Local LLM  to generate smart buying recommendations and market insights',
+     
+      tech: ['Python', 'FastAPI', 'Web Scraping', 'Ollama LLM', 'Data Analysis'],
+      github: 'https://github.com/KHbo7mid/Tech_Product_Analyser',
+      demo: '/assets/videos/smartBuy.mp4',
       
     },
     {
+      title: 'LinguaLink - Smart OCR Translator',
+      description: 'A powerful Streamlit application that extracts text from images using OCR and translates it into multiple languages. Perfect for translating documents, signs, menus, and any image containing text.',
+     
+      tech: ['Python', 'Streamlit', 'OCR', 'Google Translate API','OpenCV','EasyOCR'],
+      github: 'https://github.com/KHbo7mid/LinguaLink',
+      demo: '/assets/videos/ocr_project.mp4',
+      
+    },
+    
+    {
       title: 'University Management Dashboard',
       description: 'A full-stack application for automatically generating exam and surveillance schedules in academic settings. It includes an intelligent backend, an AI-powered planner, and a modern frontend for administration and teachers.',
-      image: '/assets/images/university.png',
+    
       tech: ['Java', 'Spring Boot', 'RESTful APIs','React','Tailwind CSS', 'MySQL', 'Python','AI'],
       github: 'https://github.com/KHbo7mid/university_dashboard',
       demo: '/assets/videos/university.mp4',
       
     },
     {
+      title: 'Supadata - Digital Business Cards',
+      description: 'Web application for creating and sharing digital business cards with QR codes. Includes responsive design, real-time updates, and secure user authentication.',
+      
+      tech: ['React.js', 'Laravel', 'Tailwind CSS', 'MySQL', 'QR Code'],
+      github: 'https://github.com/KHbo7mid/supadata',
+      demo: '/assets/videos/supadata.mp4',
+      
+    },
+    {
       title: 'E-Constat',
       description: 'Mobile app to create standardized vehicle accident reports and submit them directly to insurers. Includes a guided step-by-step flow, GPS location, photo capture with annotations, and secure claim submission.',
-      image: '/assets/images/econstat.jpg',
+     
       tech: ['Flutter', 'Dart', 'Firebase Auth', 'Cloud Firestore', 'Cloud Storage', 'Google Maps', 'REST APIs'],
       github: 'https://github.com/KHbo7mid/e_constat',
       demo: '/assets/videos/econstat.mp4',
       
     },
-    {
-  title: 'Clinic Management System',
-  description: 'A web application to manage patient records, appointments, and clinic operations efficiently. Built with a focus on usability and streamlined workflows.',
-  image: '/assets/images/clinic.jpeg',
-  tech: ['HTML','CSS','JavaScript','PHP','MySQL',],
-  github: 'https://github.com/KHbo7mid/mini_projet-clinique-CAP-BON-',
-  demo: null,
-}
+   
     
   ];
 
@@ -98,11 +110,7 @@ const Projects = () => {
               }`}
             >
               <div className="relative group">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                  

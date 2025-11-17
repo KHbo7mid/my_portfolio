@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaPython, FaJava, FaPhp, FaLaravel, FaDocker, FaGitAlt } from 'react-icons/fa';
 import { SiSpring, SiMysql, SiPostgresql, SiScikitlearn, SiTensorflow, SiNumpy, SiPandas } from 'react-icons/si';
-import { Code, Palette, Wind, Box, Smartphone, Server, Database } from 'lucide-react';
-
+import { Code, Palette, Wind, Box, Smartphone, Database } from 'lucide-react';
+import { SiFastapi ,SiOpencv ,SiPytorch } from "react-icons/si";
 const skills = [
   // Frontend
   { name: 'HTML', icon: Code, color: 'text-orange-400' }, // Palette as HTML icon
@@ -17,9 +17,8 @@ const skills = [
   // Backend
   { name: 'Laravel', icon: FaLaravel, color: 'text-red-400' },
   { name: 'Spring Boot', icon: SiSpring, color: 'text-green-500' },
-  { name: 'Node.js', icon: Server, color: 'text-green-400' },
-  { name: 'PHP', icon: FaPhp, color: 'text-purple-500' },
-  { name: 'Java', icon: FaJava, color: 'text-red-500' },
+  {name:"FastAPI", icon: SiFastapi , color:'text-blue-500'},
+  
 
   // Databases
   { name: 'SQL', icon: Database, color: 'text-purple-400' },
@@ -29,9 +28,10 @@ const skills = [
   // Programming Languages
   { name: 'Python', icon: FaPython, color: 'text-indigo-500' },
   { name: 'JAVA', icon: FaJava, color: 'text-blue-300' },
+  { name: 'PHP', icon: FaPhp, color: 'text-purple-500' },
 
   // DevOps / Tools
-  { name: 'Git', icon: FaGitAlt, color: 'text-orange-300' },
+  { name: 'Git', icon: FaGitAlt, color: 'text-red-300' },
   { name: 'Docker', icon: FaDocker, color: 'text-blue-600' },
 
   // Data / Machine Learning
@@ -39,6 +39,8 @@ const skills = [
   { name: 'NumPy', icon: SiNumpy, color: 'text-green-400' },
   { name: 'Scikit-Learn', icon: SiScikitlearn, color: 'text-purple-300' },
   { name: 'TensorFlow', icon: SiTensorflow, color: 'text-orange-400' },
+  { name: 'PyTorch', icon: SiPytorch, color: 'text-red-400' },
+  { name: 'OpenCV', icon: SiOpencv, color: 'text-yellow-400' },
 ];
 
 const containerVariants = {
@@ -54,11 +56,11 @@ const itemVariants = {
 const About = () => {
   const categories = [
     { title: 'Frontend', items: ['HTML','CSS','JavaScript','React','Tailwind CSS','Bootstrap','Flutter'] },
-    { title: 'Backend', items: ['Laravel','Spring Boot','PHP'] },
+    { title: 'Backend', items: ['Laravel','Spring Boot','FastAPI'] },
     { title: 'Databases', items: ['SQL','MySQL','PostgreSQL'] },
-    { title: 'Programming Languages', items: ['Python','JAVA'] },
+    { title: 'Programming Languages', items: ['Python','JAVA','PHP','JavaScript'] },
     { title: 'DevOps / Tools', items: ['Git','Docker'] },
-    { title: 'Data / Machine Learning', items: ['Pandas','NumPy','Scikit-Learn','TensorFlow'] },
+    { title: 'Data / Machine Learning', items: ['Pandas','NumPy','Scikit-Learn','TensorFlow','PyTorch','OpenCV'] },
   ];
 
   return (
